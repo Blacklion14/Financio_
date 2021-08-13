@@ -1,3 +1,8 @@
+
+
+
+
+
 let e = "<hr/>";
 function addTextInput(count) {
     var x = document.createElement("INPUT");
@@ -16,12 +21,17 @@ function addNumInput(count) {
 }
 
 function getInputValue() {
+    
+
+    
     var members = parseInt(document.getElementById("members").value);
     while (members--) {
         addTextInput(members);
         addNumInput(members);
         document.getElementById("myForm").innerHTML += e;
     }
+    document.getElementById("save").style.visibility="visible";
+    
 }
 
 
