@@ -1,8 +1,4 @@
 
-
-
-
-
 let e = "<hr/>";
 function addTextInput(count) {
     var x = document.createElement("INPUT");
@@ -21,17 +17,14 @@ function addNumInput(count) {
 }
 
 function getInputValue() {
-    
-
-    
     var members = parseInt(document.getElementById("members").value);
+    document.getElementById("myForm").innerHTML = "";
     while (members--) {
         addTextInput(members);
         addNumInput(members);
         document.getElementById("myForm").innerHTML += e;
     }
-    document.getElementById("save").style.visibility="visible";
-    
+    document.getElementById("save").style.visibility="visible";  
 }
 
 
@@ -44,11 +37,13 @@ function calculate() {
         payments[name] = spend;
     }
     var final = splitPayments(payments);
-
+    e = "";
     for (let y = 0; y < final.length; y++) {
         e += `${final[y]}<br/>`;
     }
-    document.getElementById("Result").innerHTML = e;
+    var result = document.getElementById("Result");
+    result.style.display = "block";
+    result.innerHTML += e;
 }
 
 function splitPayments(payments) {
