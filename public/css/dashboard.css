@@ -1,6 +1,5 @@
 * {
-    margin: 0px;
-    padding: 0px;
+   
     font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -35,6 +34,17 @@ nav {
     display: flex;
 }
 
+#save{
+    visibility: hidden;
+}
+
+#gen{
+    margin-top:3%;
+}
+#calc{
+  
+    margin-top:4%;
+}
 /* Center the image and position the close button */
 .imgcontainer {
     text-align: center;
@@ -60,15 +70,26 @@ nav {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
 }
+form{
+    flex-direction: column;
+}
+
+#result{
+    
+width:50%;
+}
+
+
 
 button {
-    background-color: #4CAF50;
+    background-color:#1cc29f;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 26px;
+    
+    padding: 14px 30px;;
+    
     border: none;
     cursor: pointer;
-    width: 90%;
+    width: 25%;
     font-size: 20px;
 }
 
@@ -79,7 +100,7 @@ button:hover {
 input[type=number],
 input[type=text],
 input[type=password] {
-    width: 90%;
+    width: 25%;
     padding: 12px 20px;
     margin: 8px 26px;
     display: inline-block;
