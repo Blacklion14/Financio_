@@ -43,6 +43,7 @@ function calculate() {
     }
     var result = document.getElementById("Result");
     result.style.display = "block";
+    result.innerHTML = "";
     result.innerHTML += e;
 }
 
@@ -65,6 +66,8 @@ function splitPayments(payments) {
         debt = Math.min(-(sortedValuesPaid[i]), sortedValuesPaid[j]);
         sortedValuesPaid[i] += debt;
         sortedValuesPaid[j] -= debt;
+
+        debt = debt.toFixed(2);
 
         final.push(` ${sortedPeople[i]} will pay ${debt} to ${sortedPeople[j]}`);
 
